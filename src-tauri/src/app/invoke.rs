@@ -70,3 +70,9 @@ pub async fn download_file_by_binary(
         }
     }
 }
+
+#[command]
+pub async fn get_machine_id() -> String {
+    let machine_id = mid::get("x").unwrap();
+    machine_id.to_string()
+}

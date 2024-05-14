@@ -67,6 +67,7 @@ name = "app"
 version = "0.1.0"
 dependencies = [
  "cargo-bloat",
+ "mid",
  "serde",
  "serde_json",
  "tauri",
@@ -1624,6 +1625,12 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7f24254aa9a54b5c858eaee2f5bccdb46aaf0e486a595ed5fd8f86ba55232a70"
 
 [[package]]
+name = "hmac-sha256"
+version = "1.1.7"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "3688e69b38018fec1557254f64c8dc2cc8ec502890182f395dbb0aa997aa5735"
+
+[[package]]
 name = "home"
 version = "0.5.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2156,6 +2163,16 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "488016bfae457b036d996092f6cb448677611ce4449e970ceaf42695203f218a"
 dependencies = [
  "autocfg",
+]
+
+[[package]]
+name = "mid"
+version = "2.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "b94379593210bf68fd4d7a738b55a0ba7c4398ea1f1302455ae6c5a363da8079"
+dependencies = [
+ "hex",
+ "hmac-sha256",
 ]
 
 [[package]]

@@ -7,7 +7,7 @@ mod app;
 mod util;
 
 use app::{invoke, menu, window};
-use invoke::{download_file, download_file_by_binary};
+use invoke::{download_file, download_file_by_binary, get_machine_id};
 use menu::{get_system_tray, system_tray_handle};
 use tauri::{GlobalShortcutManager, Manager};
 use tauri_plugin_window_state::Builder as windowStatePlugin;
@@ -37,7 +37,8 @@ pub fn run_app() {
         .plugin(tauri_plugin_oauth::init())
         .invoke_handler(tauri::generate_handler![
             download_file,
-            download_file_by_binary
+            download_file_by_binary,
+            get_machine_id,
         ])
         .setup(move |app| {
             let _window = get_window(app, pake_config, data_dir);
